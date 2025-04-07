@@ -38,7 +38,7 @@ class Account {
   withdraw (amount) {
     this.balance -= amount
     this.transactionHistory.push(
-      {transactionType: 'Withdrawl', amount: amount}
+      {transactionType: 'Withdrawal', amount: amount}
     )
 
   }
@@ -55,7 +55,7 @@ class Account {
         {transactionType: 'Transfer', amount: amount, to: recipientAccount.name}
       )
       recipientAccount.transactionHistory.push(
-        {transactionType: 'Transfer', amount: amount, from: this.name}
+        {transactionType: 'Received', amount: amount, from: this.name}
       )
     } 
     else {
